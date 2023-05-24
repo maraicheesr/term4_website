@@ -1,5 +1,178 @@
 body {
-    background: black;
-    color: #89c1cc;
+    margin:0;
+    padding:0;
+    width: 100vw;
+    /* overflow-x: hidden; */
 }
 
+:root { /* colour palette */
+    --title1: hsl(30, 33%, 31%);
+    --title2: hsl(30, 14%, 22%);
+    --title3: hsl(30, 44%, 89%);
+    --one: hsl(203, 94%, 20%);
+    --two: hsl(187, 47%, 29%);
+    --three: hsl(139, 12%, 54%);
+    --four: hsl(61, 26%, 61%);
+    --five: hsl(40, 98%, 79%);
+}
+
+section, .parallax-cntnr {
+    max-width: 100%;
+}
+
+section {
+    padding-bottom: 200px;
+}
+
+section::before {
+    content: '';
+    position: relative;
+    border-right: 100vw solid transparent;
+    border-bottom: 200px solid;
+    top: -217px;
+}
+
+section h1 {
+    font-family: 'Lilita One', cursive;
+    color: white;
+    font-size: 2.8rem;
+    -webkit-text-stroke: 1.5px black;
+    padding: 17px;
+    border-radius: 5px;
+    width: fit-content;
+    letter-spacing: 1px;
+}
+
+.header::before {
+    border: none;
+}
+
+.header {
+    min-height: 520px;
+    background: var(--one);
+    padding: 70px 0px 0px 30px
+}
+
+.parallax-cntnr {
+    min-height: 420px;
+    position: relative;
+}
+
+.parallax-cntnr h1 { /* title */
+    position: absolute;
+    font-family: 'Grandstander', cursive;
+    font-size: 7.5rem;
+    letter-spacing: normal;
+    color: var(--title3);
+    top: 120px;
+    right: 100px;
+    left: auto;
+    background-color: hsl(209, 24%, 44%);
+    box-shadow: 18px 18px 0px 0px hsl(209, 24%, 39%);
+    padding: 8px 10px 0px 10px;
+    border-radius: 5px 7px;
+    text-shadow: 0.5px 0.5px 0px hsl(30, 44%, 84%),
+    1px 1px 0px hsl(30, 44%, 84%),
+    1.5px 1.5px 0px hsl(30, 44%, 84%),
+    2px 2px 0px hsl(30, 44%, 84%),
+    2.5px 2.5px 0px hsl(30, 44%, 84%),
+    3px 3px 0px hsl(30, 44%, 84%),
+    3.5px 3.5px 0px hsl(30, 44%, 84%),
+    4px 4px 0px hsl(30, 44%, 84%),
+    4.5px 4.5px 0px hsl(30, 44%, 84%),
+    5px 5px 0px hsl(30, 44%, 84%),
+    6px 6px 0px black;
+}
+
+.parallax-cntnr h1 .brown {
+    color: var(--title1);
+    text-shadow: 0.5px 0.5px 0px hsl(30, 33%, 26%),
+    1px 1px 0px hsl(30, 33%, 26%),
+    1.5px 1.5px 0px hsl(30, 33%, 26%),
+    2px 2px 0px hsl(30, 33%, 26%),
+    2.5px 2.5px 0px hsl(30, 33%, 26%),
+    3px 3px 0px hsl(30, 33%, 26%),
+    3.5px 3.5px 0px hsl(30, 33%, 26%),
+    4px 4px 0px hsl(30, 33%, 26%),
+    4.5px 4.5px 0px hsl(30, 33%, 26%),
+    5px 5px 0px hsl(30, 33%, 26%),
+    6px 6px 0px black;
+}
+
+.parallax-cntnr h1 .black {
+    color: var(--title2);
+    text-shadow: 0.5px 0.5px 0px hsl(30, 14%, 17%),
+    1px 1px 0px hsl(30, 14%, 17%),
+    1.5px 1.5px 0px hsl(30, 14%, 17%),
+    2px 2px 0px hsl(30, 14%, 17%),
+    2.5px 2.5px 0px hsl(30, 14%, 17%),
+    3px 3px 0px hsl(30, 14%, 17%),
+    3.5px 3.5px 0px hsl(30, 14%, 17%),
+    4px 4px 0px hsl(30, 14%, 17%),
+    4.5px 4.5px 0px hsl(30, 14%, 17%),
+    5px 5px 0px hsl(30, 14%, 17%),
+    6px 6px 0px black;
+}
+
+.parallax-cntnr.pic-cntnr {
+    height: fit-content;
+    z-index: 10;
+    margin-bottom: -80px;
+}
+
+.parallax-cntnr.pic-cntnr img {
+    filter: drop-shadow(5px 2px)
+            drop-shadow(-3px 0px);    
+}
+
+.section2 {
+    background: var(--two)
+}
+
+.section2::before {
+    border-bottom-color: var(--two);
+}
+
+.section2 h1 {
+    background: hsl(187, 47%, 24%);
+    box-shadow: 8px 8px 0px 0px hsl(187, 47%, 19%);
+}
+
+.section3 {
+    background: var(--three);
+}
+
+.section3::before {
+    border-bottom-color: var(--three);
+}
+
+.section3 h1 {
+    background: hsl(139, 12%, 49%);
+    box-shadow: 8px 8px 0px 0px hsl(139, 12%, 44%);
+}
+
+.section4 {
+    background: var(--four)
+}
+
+.section4::before {
+    border-bottom-color: var(--four);
+}
+
+.section4 h1 {
+    background: hsl(61, 26%, 56%);
+    box-shadow: 8px 8px 0px 0px hsl(61, 26%, 51%);
+}
+
+.footer {
+    background: var(--five)
+}
+
+.footer::before {
+    border-bottom-color: var(--five)
+}
+
+.footer h1 {
+    background: hsl(40, 98%, 74%);
+    box-shadow: 8px 8px 0px 0px hsl(40, 98%, 69%);
+}
