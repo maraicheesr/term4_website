@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     padding:0;
@@ -5,15 +9,58 @@ body {
     /* overflow-x: hidden; */
 }
 
-:root { /* colour palette */
+.background {
+    background-image: url('https://media.architecturaldigest.com/photos/63f69b65782302990922604c/master/w_1600%2Cc_limit/EEAAO_12827.jpg');
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    background-position: center;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+.navbar {
+    padding: 10px 30px;
+    vertical-align: center;
+}
+
+.navbar-title {
+    float: left;
+    padding: 20px;
+    font-family: 'Ribeye Marrow', cursive;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 0px 5px;
+    background: white;
+    color: rgb(100, 196, 79);
+}
+
+.navbar a {
+    font-family: 'Ysabeau', sans-serif;
+    color: white;
+    text-decoration: none;
+    float: right;
+    font-size: 1.4rem;
+    padding: 5px 20px 10px 20px;
+}
+
+.navbar a:hover {
+    background:red;
+}
+
+
+:root {
+    /* title's colours */
     --title1: hsl(30, 33%, 31%);
     --title2: hsl(30, 14%, 22%);
     --title3: hsl(30, 44%, 89%);
-    --one: hsl(203, 94%, 20%);
-    --two: hsl(187, 47%, 29%);
-    --three: hsl(139, 12%, 54%);
-    --four: hsl(61, 26%, 61%);
-    --five: hsl(40, 98%, 79%);
+    /* colour palette */
+    --one: hsla(40, 98%, 79%, 0.3);
+    --two: hsla(61, 26%, 61%, 0.3);
+    --three: hsla(139, 12%, 54%, 0.3);
+    --four: hsla(187, 47%, 29%, 0.3);
+    --five: hsla(203, 94%, 20%, 0.3);
 }
 
 section, .parallax-cntnr {
@@ -21,36 +68,41 @@ section, .parallax-cntnr {
 }
 
 section {
-    padding-bottom: 200px;
+    padding: 50px 80px;
 }
 
-section::before {
+section::after {
     content: '';
-    position: relative;
-    border-right: 100vw solid transparent;
-    border-bottom: 200px solid;
-    top: -217px;
+    position: absolute;
+    border-left: 100vw solid transparent;
+    border-top: 200px solid;
 }
 
 section h1 {
     font-family: 'Lilita One', cursive;
-    color: white;
-    font-size: 2.8rem;
-    -webkit-text-stroke: 1.5px black;
-    padding: 17px;
+    color: transparent;
+    /* background-color: hsl(0, 0%, 96%); */
+    text-shadow: 2px 2px 0px rgb(255, 246, 239);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+    background-clip: text;
+    font-size: 3rem;
+    -webkit-text-stroke: 0.5px black;
+    padding: 15px;
     border-radius: 5px;
     width: fit-content;
     letter-spacing: 1px;
+    border: 1.5px solid black;
 }
 
-.header::before {
-    border: none;
+.header::after {
+    border-top-color: var(--one);
 }
 
 .header {
-    min-height: 520px;
+    /* min-height: 520px; */
     background: var(--one);
-    padding: 70px 0px 0px 30px
+    padding: 0;
 }
 
 .parallax-cntnr {
@@ -58,19 +110,22 @@ section h1 {
     position: relative;
 }
 
-.parallax-cntnr h1 { /* title */
+.parallax-cntnr h1, .parallax-cntnr.title-shadow {
     position: absolute;
+    left: auto;
+    border-radius: 5px 7px;
+}
+
+.parallax-cntnr h1 { /* title */
     font-family: 'Grandstander', cursive;
-    font-size: 7.5rem;
+    font-size: 7.8rem;
+    top: 150px;
+    right: 80px;
     letter-spacing: normal;
     color: var(--title3);
-    top: 120px;
-    right: 100px;
-    left: auto;
-    background-color: hsl(209, 24%, 44%);
-    box-shadow: 18px 18px 0px 0px hsl(209, 24%, 39%);
+    -webkit-text-stroke: 1.6px black;
+    background: hsl(209, 24%, 44%);
     padding: 8px 10px 0px 10px;
-    border-radius: 5px 7px;
     text-shadow: 0.5px 0.5px 0px hsl(30, 44%, 84%),
     1px 1px 0px hsl(30, 44%, 84%),
     1.5px 1.5px 0px hsl(30, 44%, 84%),
@@ -82,6 +137,8 @@ section h1 {
     4.5px 4.5px 0px hsl(30, 44%, 84%),
     5px 5px 0px hsl(30, 44%, 84%),
     6px 6px 0px black;
+    /* box-shadow: 20px 20px 0px 0px hsl(209, 24%, 39%); */
+    overflow: visible;
 }
 
 .parallax-cntnr h1 .brown {
@@ -114,65 +171,76 @@ section h1 {
     6px 6px 0px black;
 }
 
+.parallax-cntnr.title-shadow {
+    background: hsl(209, 24%, 39%);
+    top: 138px;
+    right: 82px;
+    width: 728px;
+    height: 120px;
+}
+
 .parallax-cntnr.pic-cntnr {
     height: fit-content;
     z-index: 10;
-    margin-bottom: -80px;
 }
 
 .parallax-cntnr.pic-cntnr img {
-    filter: drop-shadow(5px 2px)
-            drop-shadow(-3px 0px);    
+    filter: drop-shadow(5px 2px 0px white);  
 }
 
 .section2 {
     background: var(--two)
 }
 
-.section2::before {
-    border-bottom-color: var(--two);
+.section2::after {
+    border-top-color: var(--two);
+    /* filter: drop-shadow(0px 2px 0px rgba(255,255,255,1)); */
 }
 
 .section2 h1 {
     background: hsl(187, 47%, 24%);
-    box-shadow: 8px 8px 0px 0px hsl(187, 47%, 19%);
+    box-shadow: 8px 8px 0px 0px hsl(187, 47%, 19%),
+                9.25px 9.25px 0px 0px black;
 }
 
 .section3 {
     background: var(--three);
 }
 
-.section3::before {
-    border-bottom-color: var(--three);
+.section3::after {
+    border-top-color: var(--three);
 }
 
 .section3 h1 {
     background: hsl(139, 12%, 49%);
-    box-shadow: 8px 8px 0px 0px hsl(139, 12%, 44%);
+    box-shadow: 8px 8px 0px 0px hsl(139, 12%, 44%),
+                9.25px 9.25px 0px 0px black;
 }
 
 .section4 {
     background: var(--four)
 }
 
-.section4::before {
-    border-bottom-color: var(--four);
+.section4::after {
+    border-top-color: var(--four);
 }
 
 .section4 h1 {
     background: hsl(61, 26%, 56%);
-    box-shadow: 8px 8px 0px 0px hsl(61, 26%, 51%);
+    box-shadow: 8px 8px 0px 0px hsl(61, 26%, 51%),
+                9.25px 9.25px 0px 0px black;
 }
 
 .footer {
     background: var(--five)
 }
 
-.footer::before {
-    border-bottom-color: var(--five)
+.footer::after {
+    border: none;
 }
 
 .footer h1 {
     background: hsl(40, 98%, 74%);
-    box-shadow: 8px 8px 0px 0px hsl(40, 98%, 69%);
+    box-shadow: 8px 8px 0px 0px hsl(40, 98%, 69%),
+                9.25px 9.25px 0px 0px black;
 }
