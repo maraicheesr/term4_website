@@ -6,7 +6,28 @@ body {
     margin:0;
     padding:0;
     width: 100vw;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #749acf;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #547096;
+}
+
+img {vertical-align: top;}
+
+.self-center {
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 .background {
@@ -16,16 +37,17 @@ body {
     object-fit: cover;
     position: fixed;
     background-position: center;
-    filter: brightness(70%);
+    filter: brightness(50%);
     z-index: -1;
 }
 
 .navbar {
-    padding: 0px 20px;
-    z-index: 11;
+    padding: 0 20px 10px 20px;
+    z-index: 10;
     position: fixed;
     overflow: hidden;
     width: 100%;
+    box-shadow: 
 }
 
     .navbar-title, .navbar a {
@@ -74,17 +96,17 @@ body {
                 border-top: 4px solid white;
                 transform: scale(0);
                 transition: transform 0.3s ease-in-out;
-                margin-bottom: 8px;
                 transform-origin: top;
+                margin-bottom: -4px;
             }
 
 
                 .navbar a:hover::before {
-                    transform: scale(1);
+                    transform: scale(1.1);
                 }
 
                 .navbar a:active::before {
-                    transform: scale(1.1);
+                    transform: scale(1.3, 1.1);
                 }
 
 
@@ -94,11 +116,21 @@ body {
     --title2: hsl(30, 14%, 22%);
     --title3: hsl(30, 44%, 89%);
     /* colour palette */
-    --one: hsla(203, 94%, 20%);
+    /* --one: hsla(203, 94%, 20%);
     --two: hsla(187, 47%, 29%);
     --three: hsla(139, 12%, 54%);
     --four: hsla(61, 26%, 61%);
-    --five: hsla(40, 98%, 79%);
+    --five: hsla(40, 98%, 79%); */
+    --one: hsl(28, 25%, 76%);
+    --one-dark: hsl(28, 25%, 71%);
+    --two: hsl(40, 33%, 68%);
+    --two-dark: hsl(40, 33%, 63%);
+    --three: hsl(26, 20%, 52%);
+    --three-dark: hsl(26, 20%, 47%);
+    --four: hsl(29, 19%, 32%);
+    --four-dark: hsl(29, 19%, 27%);
+    --five: hsl(22, 13%, 16%);
+    --five-dark: hsl(22, 13%, 11%);
 }
 
 section, .parallax-cntnr {
@@ -106,49 +138,77 @@ section, .parallax-cntnr {
 }
 
 section {
-    padding: 50px 80px;
+    padding-top: 25px
 }
 
 section h1 {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Ranchers', cursive;
     color: transparent;
     /* background-color: hsl(0, 0%, 96%); */
     text-shadow: 2px 2px 0px rgb(255, 246, 239);
     -webkit-background-clip: text;
        -moz-background-clip: text;
     background-clip: text;
-    font-size: 3rem;
+    font-size: 3.5rem;
     -webkit-text-stroke: 0.5px black;
     padding: 15px;
-    border-radius: 5px;
-    width: fit-content;
-    letter-spacing: 1px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 4px;
     border: 1.5px solid black;
+    z-index: 1;
+}
+
+.content {
+    padding: 50px;
+}
+
+.content p, .content ul {
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    font-family: 'Spectral', serif;
+    font-size: 1.1rem;
+    padding: 5px 8px;
+    width: 500px;
+}
+
+.content img {
+    display: inline-block;
+    border: 8px solid white;
+    box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.3);
 }
 
 .header {
-    /* min-height: 520px; */
+    /* height: fit-content; */
+    height: 620px;
     padding: 0;
+    overflow: hidden;
+    margin-bottom: -71px;
 }
 
 .parallax-cntnr {
-    min-height: 420px;
+    height: 100%;
     position: relative;
     padding: 70px 0px 0px 40px;
 }
 
-.parallax-cntnr h1, .parallax-cntnr.title-shadow {
-    position: absolute;
+.parallax-cntnr h1, .parallax-cntnr > .title-shadow {
+    /* position: absolute; */
     left: auto;
     border-radius: 5px 7px;
 }
 
 .parallax-cntnr h1 { /* title */
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
     font-family: 'Grandstander', cursive;
     font-size: 7.8rem;
-    top: 170px;
-    right: 65px;
-    letter-spacing: normal;
+    top: 220px;
+    right: 80px;
+    width: fit-content;
+    letter-spacing: 1px;
     color: var(--title3);
     -webkit-text-stroke: 1.6px black;
     /* background: hsl(209, 24%, 44%); */
@@ -164,10 +224,27 @@ section h1 {
     4px 4px 0px hsl(30, 44%, 84%),
     4.5px 4.5px 0px hsl(30, 44%, 84%),
     5px 5px 0px hsl(30, 44%, 84%),
-    6px 6px 0px black;
-    /* box-shadow: 20px 20px 0px 0px hsl(209, 24%, 39%); */
+    6px 6px 0px black,
+    7px 7px 1px rgba(0,0,0,0.4);
+    box-shadow: 20px 20px 0px 0px var(--one-dark),
+                21px 21px 0px 0px black;
     overflow: visible;
 }
+
+.parallax-cntnr h1 i {
+    flex: 1 1 100%;
+    font-style: normal;
+    transition: 1.2s;
+}
+
+.parallax-cntnr h1 i:hover {
+    /* position: absolute; */
+    margin-top: -25px;
+    filter: drop-shadow(1.5px 1.5px 4px rgba(0,0,0,0.4))
+    drop-shadow(2px 4px 2px rgba(0,0,0,0.3));
+    transition: 0.5s;
+}
+
 
 .parallax-cntnr h1 .brown {
     color: var(--title1);
@@ -181,7 +258,8 @@ section h1 {
     4px 4px 0px hsl(30, 33%, 26%),
     4.5px 4.5px 0px hsl(30, 33%, 26%),
     5px 5px 0px hsl(30, 33%, 26%),
-    6px 6px 0px black;
+    6px 6px 0px black,
+    7px 7px 1px rgba(0,0,0,0.4);
 }
 
 .parallax-cntnr h1 .black {
@@ -196,10 +274,11 @@ section h1 {
     4px 4px 0px hsl(30, 14%, 17%),
     4.5px 4.5px 0px hsl(30, 14%, 17%),
     5px 5px 0px hsl(30, 14%, 17%),
-    6px 6px 0px black;
+    6px 6px 0px black,
+    7px 7px 1px rgba(0,0,0,0.4);
 }
 
-.parallax-cntnr.title-shadow {
+.parallax-cntnr > .title-shadow {
     background: hsl(209, 24%, 39%);
     top: 138px;
     right: 82px;
@@ -207,57 +286,103 @@ section h1 {
     height: 120px;
 }
 
-.parallax-cntnr.pic-cntnr {
-    z-index: 10;
-
+.parallax-cntnr .pic-cntnr {
+    /* display: inline-block; */
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 0;
+    top: 60px;
+    left: 50px;
 }
 
-.parallax-cntnr.pic-cntnr img {
-    filter: drop-shadow(5px 2px 0px white);  
+.header .pic-cntnr .raccacoonie {
+    filter: drop-shadow(30px -10px 0px white);
+    /* mix-blend-mode: multiply;
+    filter: brightness(120%); */
 }
 
-.pic-cntnr.counter {
-
+.section2 {
 }
 
-
-
-.section2.content div {
-    background: var(--two)
+.section2 > .content p {
+    vertical-align: top;
+    width: 600px;
+    background: var(--two);
+    box-shadow: 5px 5px 0px 0px var(--two-dark),
+    5.5px 5.5px 0px 0px black;
+    color: #54431d;
 }
 
 .section2 h1 {
-    background: hsl(187, 47%, 24%);
-    box-shadow: 8px 8px 0px 0px hsl(187, 47%, 19%),
-                9.25px 9.25px 0px 0px black;
+    background: var(--two-dark);
+    box-shadow: 0 8px 0px 0px hsl(40, 33%, 58%),
+                0 9.25px 0px 0px black;
 }
 
-.section3.content div {
-    background: var(--three);
+img.poster {
+    display: inline-block;
+    margin-left: 80px;
+    border: 4px inset rgb(99, 53, 13);
+    outline: 5px outset rgb(134, 73, 19);
 }
+
+.section3 > .content p {
+    background: var(--three);
+    box-shadow: 5px 5px 0px 0px var(--three-dark),
+                5.5px 5.5px 0px 0px black;
+}
+
 
 .section3 h1 {
-    background: hsl(139, 12%, 49%);
-    box-shadow: 8px 8px 0px 0px hsl(139, 12%, 44%),
-                9.25px 9.25px 0px 0px black;
+    background: var(--three-dark);
+    box-shadow: 0px 8px 0px 0px hsl(26, 20%, 42%),
+                0 9.25px 0px 0px black;
 }
 
-.section4.content div {
-    background: var(--four)
+.section3 .img-cntnr {
+    display: inline-block;
+    min-width: 500px;
+    height: 200px;
+    margin-left: 80px;
+}
+
+.section4 > .content ul {
+    background: var(--four);
+    box-shadow: 5px 5px 0px 0px var(--four-dark),
+    5.5px 5.5px 0px 0px black;
+    display: inline-block;
+    margin-left: 50px;
 }
 
 .section4 h1 {
-    background: hsl(61, 26%, 56%);
-    box-shadow: 8px 8px 0px 0px hsl(61, 26%, 51%),
-                9.25px 9.25px 0px 0px black;
+    background: var(--four-dark);
+    box-shadow: 0px 8px 0px 0px hsl(29, 19%, 22%),
+                0px 9.25px 0px 0px black;
 }
 
-.footer.content div {
+.section4 img {
+    transform: rotate(-1.5deg);
+    margin: 30px 0 0 70px;
+}
+
+.footer {
     background: var(--five)
 }
 
-.footer h1 {
-    background: hsl(40, 98%, 74%);
-    box-shadow: 8px 8px 0px 0px hsl(40, 98%, 69%),
-                9.25px 9.25px 0px 0px black;
+.footer > .content ul {
+    box-shadow: 5px 5px 0px 0px var(--five-dark),
+    5.5px 5.5px 0px 0px black;
+    width: 90%;
 }
+
+.footer h1 {
+    background: var(--five-dark);
+    box-shadow: 0px 8px 0px 0px hsl(22, 13%, 6%),
+                0 9.25px 0px 0px black;
+}
+
+.content {
+    padding: 50px;
+}
+

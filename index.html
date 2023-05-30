@@ -11,54 +11,105 @@
     <script type="text/javascript" src="index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Noto+Color+Emoji&family=Ribeye+Marrow&family=Gluten:wght@500;600&family=Ysabeau&family=Grandstander:wght@800&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Noto+Color+Emoji&family=Ribeye+Marrow&family=Gluten:wght@500;600&family=Ysabeau&family=Grandstander:wght@800&family=Lilita+One&family=Spectral&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background"></div>
     <section class="header" id="title">
         <div class="navbar" id="navbar">
-            <i>🦝</i><span class="navbar-title">Tran Bao Anh</span>
+            <div style="margin-top: 5px">
+                <i>🦝</i><span class="navbar-title">Tran Bao Anh</span>
+            </div>
             <div>
-                <a href="#title" class="navlink">Title</a>
-                <a href="#origin" class="navlink">Origin</a>
-                <a href="#description" class="navlink">Description</a>
-                <a href="#behaviour" class="navlink">Behaviour</a>
-                <a href="#credits" class="navlink">Credits</a>   
+                <a href="#title" class="navlink"><i class="fa fa-regular fa-text"></i>Title</a>
+                <a href="#origin" class="navlink"><i class="fa fa-regular fa-trash-can"></i>Origin</a>
+                <a href="#description" class="navlink"><i class="fa fa-regular fa-face-awesome"></i>Description</a>
+                <a href="#behaviour" class="navlink"><i class="fa fa-regular fa-knife-kitchen"></i>Behaviour</a>
+                <a href="#credits" class="navlink"><i class="fa fa-regular fa-clipboard-list"></i>Credits</a>
             </div>
              
         </div>
         <div class="parallax-cntnr">
             <h1 class="parallax" data-speed="0.5">
-                <!--Raccacoonie-->
-                <span class="brown">R</span><span class="black">a</span><span>c</span><span class="brown">c</span><span class="black">a</span><span>c</span><span>o</span><span class="brown">o</span><span class="black">n</span><span>i</span><span class="brown">e</span>
+                <!-- RACCACOONIE -->
+                <!--    <i> instead of <span> for readability    -->
+                <i class="brown">R</i><i class="black">a</i><i>c</i><i class="brown">c</i><i class="black">a</i><i>c</i><i>o</i><i class="brown">o</i><i class="black">n</i><i>i</i><i class="brown">e</i>
             </h1>
-            <div class="title-shadow"></div>
             <div class="pic-cntnr">
-                <img class="parallax" src="/images/parallax/mask-group.svg" draggable="false" width="600px" data-speed="0.2">
-                <div class="counter">
-                    <div class="vegetable-bowl"></div>
-                    <div class="soup-pot"></div>
-                    <div class="countertop"></div>
-                </div>
+                <img class="parallax raccacoonie" src="/images/parallax/mask-group.svg" draggable="false" width="500px" data-speed="0.2">
             </div>
         </div>
     </section>
     <section class="section2" id="origin">
         <h1>Origin</h1>
         <div class="content">
-            
+            <div style="display: inline-block; vertical-align: top; margin-left: 30px">
+            <p>Raccacoonie is a non-original original character from the 2022 sci-fi blockbuster Everything Everywhere All At Once. Halfway through the 2-hour movie, the protagonist – Evelyn – is trying to explain ‘verse-jumping’ to her family, mentioning how the raccoon in ‘Raccacoonie’ controls a human chef by pulling his hair and magically turns him into an excellent cook, as reference point. The movie she is trying to talk about, however, is not titled ‘Raccacoonie’ but rather ‘Ratatouille’. EEAAO goes one step further and, as a joke, creates an entire parallel universe from Evelyn’s mess-up where Raccacoonie does indeed exist.</p>
+            <p>“‘Raccacoonie’, you know? The one with the chef, and he makes bad food, phooey, and then, this raccoon sit on his head, ooh, control him, and then he cooks good food.”
+            <br>
+            <span style="float: right; display: block;">–Evelyn (Michelle Yeoh), EEAAO</span>
+            <br>
+            </p>
+            <p>In production of the film, a remote-controlled <a href="https://www.ign.com/articles/everything-everywhere-all-at-once-raccacoonie-real-raccoon-corpse">stuffed raccoon corpse</a> was used as prop for Raccacoonie’s scenes.</p>
+            <img style="transform: rotate(2deg); margin-left: 80px; margin-top: 10px;" draggable="false" width="300px" src="/images/raccacoonie_remote-control.jpg" alt="">
+            </div>
+            <img class="poster" draggable="false" width="350px" src="https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg" alt="">
         </div>
     </section>
     <section class="section3" id="description">
         <h1>Description</h1>
+        <div class="content">
+            <div style="display: inline-block; width: fit-content; vertical-align: top;">
+            <p>Looks exactly like a raccoon you would bust digging through your trash can if you live in North America, except its movements seem quite unnatural and robot-like.</p>
+            <p>Speaks flawless English.</p>
+            </div>
+            <div class="img-cntnr">
+                <img draggable="false" width="250px" height="200px" style="object-fit: cover; background-position: center;" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Raccoon_in_Central_Park_%2835264%29.jpg" alt="">
+                <img draggable="false" width="250px" height="200px" style="object-fit: cover; background-position: center;" src="/images/raccacoonie.jpg" alt="">
+                <br><i style="display: block; width: 100%; text-align: center; color: white;">Raccoon vs. Raccacoonie</i>
+            </div>
+        </div>
     </section>
     <section class="section4" id="behaviour">
         <h1>Behaviour</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/z5DRSy_L2BE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dpJia_skvVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="content">
+            <ul>
+                <li>Phenomenal cook – has all recipes ever needed memorised.
+                </li>
+                <li>Phenomenal at controlling its human puppet to spin an egg on a spatula, juggle leeks, and do other fancy food tricks.
+                </li>
+                <li>Can sing (see 'Now We're Cooking') and likes to do so while <span style="text-decoration-line: line-through;">cooking</span> guiding its human puppet to cook.
+                </li>
+                <li>Presents itself as emotionally attached to its human puppet.
+                </li>
+                <li>Does not want to be seen in action by a human other than the one it controls.
+                </li>
+                <li>Not super ethical – will go to any lengths to keep its secret a secret.
+                </li>
+                <li>Can turn murderous in a split second if needed (meaning if it gets seen by a human other than the one it controls).
+                </li>
+                <li>Does not want to go to jail.
+                </li>
+            </ul>
+            <img draggable="false" width="400px" src="/images/raccacoonie_arrested.png" alt="">
+        </div>
+        <iframe style="display: inline-block; margin: 0 0 40px 180px" width="400" height="200" src="https://www.youtube.com/embed/z5DRSy_L2BE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <hr>
+        <h3 style="color: white; text-align: center; font-size: 2rem; font-family: 'Gluten'">A compilation of Raccacoonie's scenes</h3>
+        <iframe class="self-center" style="display: block; margin-bottom: 100px;" width="800" height="500" src="https://www.youtube.com/embed/dpJia_skvVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </section>
     <section class="footer" id="credits">
         <h1>Credits</h1>
+        <div class="content">
+        <ul class="self-center">
+            <li>EEOAA poster: IMDB/Amazon</li>
+            <li>Photo of real raccoon: Wikimedia Commons</li>
+            <li>Raccacoonie prop's remote control: Screenshot from EEOAA <a href="https://www.youtube.com/watch?v=3xSC0fGSvj0">BTS</a> on YouTube</li>
+            <li>Other images: Screenshots from EEOAA</li>
+
+        </div>
+
+        </ul>
     </section>
 </body>
 </html>
