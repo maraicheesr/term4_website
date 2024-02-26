@@ -24,7 +24,7 @@ a:visited {
     color: #547096;
 }
 
-img {vertical-align: top;}
+img {vertical-align: top; border-radius: 3px}
 
 .self-center {
     right: 0;
@@ -327,7 +327,6 @@ img.poster {
     margin-left: 80px;
     border: 4px inset rgb(99, 53, 13);
     outline: 5px outset rgb(134, 73, 19);
-    border-radius: 3px
 }
 
 .section3 > .content p {
